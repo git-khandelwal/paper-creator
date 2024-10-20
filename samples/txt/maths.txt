@@ -1,0 +1,131 @@
+Page 1 of 10 
+
+SAMPLE QUESTION PAPER
+Class X Session 2023-24
+MATHEMATICS STANDARD (Code No.041)
+TIME: 3 hours
+
+                                                                                   MAX.MARKS: 80
+
+
+General Instructions:
+1.  This Question Paper has 5 Sections A, B, C, D and E.
+2.  Section A has 20 MCQs carrying 1 mark each
+3.  Section B has 5 questions carrying 02 marks each.
+4.  Section C has 6 questions carrying 03 marks each.
+5.  Section D has 4 questions carrying 05 marks each.
+6.  Section E has 3 case based integrated units of assessment (04 marks each) with sub-
+     parts of the values of 1, 1 and 2 marks each respectively.
+7.  All Questions are compulsory. However, an internal choice in 2 Qs of 5 marks, 2 Qs of 3
+      marks and 2 Questions of 2 marks has been provided. An internal choice has been
+      provided in the 2marks questions of Section E
+8.  Draw neat figures wherever required. Take π =22/7 wherever required if not stated.
+______________________________________________________________________________________________________________
+
+SECTION A
+
+
+Section A consists of 20 questions of 1 mark each.
+
+1.
+If two positive integers a and b are written as a = x3y2 and b = xy3, where x, y are prime
+numbers, then the result obtained by dividing the product of the positive integers by the
+LCM (a, b) is
+(a) xy                              (b) xy2                                           (c) x3y3                                        (d) x2y2
+1
+2.
+
+The given linear polynomial y = f(x) has
+(a) 2 zeros
+(b) 1 zero and the zero is ‘3’
+(c) 1 zero and the zero is ‘4’
+(d)  No zero
+
+
+
+
+1
+Page 2 of 10
+
+3.
+The lines representing the given pair of linear equations are non-intersecting.  Which of the
+following statements is true?
+(a)
+௔ଵ
+௔ଶ =
+௕ଵ
+௕ଶ =
+௖ଵ
+௖ଶ
+(b)
+௔ଵ
+௔ଶ =
+௕ଵ
+௕ଶ ≠
+௖ଵ
+௖ଶ
+(c)
+௔ଵ
+௔ଶ ≠
+௕ଵ
+௕ଶ =
+௖ଵ
+௖ଶ
+(d)
+௔ଵ
+௔ଶ ≠
+௕ଵ
+௕ଶ ≠
+௖ଵ
+௖ଶ
+1
+4.
+The nature of roots of the quadratic equation 9x2 – 6x – 2 = 0 is:
+(a) No real roots                                                   (b) 2 equal real roots
+(c) 2 distinct real roots                                      (d) More than 2 real roots
+1
+5.
+Two APs have the same common difference. The first term of one of these is –1 and that of
+the other is – 8. The difference between their 4th terms is
+(a) 1                                (b) -7                                (c)  7                          (d) 9
+1
+6.
+What is the ratio in which the line segment joining (2,-3) and (5, 6) is divided by x-axis?
+(a)  1:2                             (b) 2:1                                       (c) 2:5                                      (d) 5:2
+1
+7.
+ A point (x,y) is at a distance of 5 units from the origin.  How many such points lie in the third
+quadrant?
+(a) 0                                 (b)  1                               (c)  2                             (d)  infinitely many
+1
+8.
+In 𝛥 ABC, DE ‖ AB.  If AB = a, DE = x, BE = b and EC = c.
+Then x expressed in terms of a, b and c is:
+(a)
+௔௖
+௕                              (b)
+௔௖
+௕ା௖
+(c)
+௔௕
+௖                              (d)
+௔௕
+௕ା௖
+1
+9.
+If O is centre of a circle and Chord PQ makes an angle 50° with the tangent PR at the point of contact
+P, then the angle subtended by the chord at the centre is
+(a) 130°                         (b) 100°
+(c) 50°                           (d) 30°
+
+
+1
+A
+B
+C
+D
+E
+O
+P
+Q
+R
