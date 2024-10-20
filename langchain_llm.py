@@ -10,7 +10,7 @@ import json
 if 'GOOGLE_API_KEY' not in os.environ:
     os.environ['GOOGLE_API_KEY'] = getpass.getpass('Provide your Google API Key: ')
 
-def extract_text_from_pdf(file: UploadFile) -> str:
+async def extract_text_from_pdf(file: UploadFile) -> str:
     text = ""
     data = file.file.read()
     doc = fitz.open(stream=data, filetype="pdf")
@@ -20,13 +20,6 @@ def extract_text_from_pdf(file: UploadFile) -> str:
 
 def extract_text_from_txt(file: UploadFile) -> str:
     text = file.file.read().decode("utf-8")
-    return text
-
-def _extract_text_from_pdf(file) -> str:
-    text = ""
-    doc = fitz.open(file)
-    for page in doc:
-        text += page.get_text("text")
     return text
 
 def process_text(text: str, sample_paper: str):
@@ -77,15 +70,12 @@ class SamplePaper(BaseModel):
     sections: List[Section]
     """
 
-# data = process_text(text=extract_text_from_pdf(r"C:\Users\khand\Downloads\MathsStandard-SQP-pages-deleted.pdf"), sample_paper=sample_paper)
-# print(data)
-
 async def gemini_extraction(file):
     filename = file.filename
     file_extension = os.path.splitext(filename)[1].lower()
     
     if file_extension == ".pdf":
-        extracted_text = extract_text_from_pdf(file)
+        extracted_text = await extract_text_from_pdf(file)
     elif file_extension == ".txt":
         extracted_text = extract_text_from_txt(file)
     else:
