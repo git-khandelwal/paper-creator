@@ -4,7 +4,7 @@ from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 from langchain_google_genai import ChatGoogleGenerativeAI
 import fitz  # PyMuPDF for PDF Text Extraction
-from fastapi import UploadFile
+from fastapi import UploadFile, HTTPException
 import json
 
 if 'GOOGLE_API_KEY' not in os.environ:
@@ -16,6 +16,10 @@ def extract_text_from_pdf(file: UploadFile) -> str:
     doc = fitz.open(stream=data, filetype="pdf")
     for page in doc:
         text += page.get_text("text")
+    return text
+
+def extract_text_from_txt(file: UploadFile) -> str:
+    text = file.file.read().decode("utf-8")
     return text
 
 def _extract_text_from_pdf(file) -> str:
@@ -47,7 +51,7 @@ class Question(BaseModel):
     question: str
     answer: str
     type: str
-    question_slug: str
+    question_slug: str, should contain at most 5 words
     reference_id: str
     hint: Optional[str] = None
     params: Optional[dict] = {}
@@ -76,9 +80,17 @@ class SamplePaper(BaseModel):
 # data = process_text(text=extract_text_from_pdf(r"C:\Users\khand\Downloads\MathsStandard-SQP-pages-deleted.pdf"), sample_paper=sample_paper)
 # print(data)
 
-
 async def gemini_extraction(file):
-    data = process_text(text=extract_text_from_pdf(file), sample_paper=sample_paper)
+    filename = file.filename
+    file_extension = os.path.splitext(filename)[1].lower()
+    
+    if file_extension == ".pdf":
+        extracted_text = extract_text_from_pdf(file)
+    elif file_extension == ".txt":
+        extracted_text = extract_text_from_txt(file)
+    else:
+        raise HTTPException(status_code=400, detail="Unsupported file type")
+    data = process_text(text=extracted_text, sample_paper=sample_paper)
     data = data.replace("```", "").replace("json", "").strip()
     data = json.loads(data)
     return data
