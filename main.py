@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException, UploadFile, File
 from models import SamplePaper, SamplePaperUpdate
 from database import create_paper, fetch_paper, update_paper, delete_paper
-from extractor import gemini_extraction
+from langchain_llm import gemini_extraction
 
 app = FastAPI()
 
