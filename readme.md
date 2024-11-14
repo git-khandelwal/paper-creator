@@ -9,9 +9,16 @@ This application is used to create a sample paper API using FastAPI, with the fo
 
 To run the application on localhost, follow these steps:
 1. Clone the git repository and then go to the git location.
-2. Run pip install -r requirements.txt
+   ```bash
+   git clone https://github.com/git-khandelwal/paper-creator
+   cd paper-creator
+2. Install dependencies: 
+   ```bash
+   pip install -r requirements.txt
 3. Install MongoDB from https://www.mongodb.com/try/download/community and make sure the mongodb server is running on default port.
 4. Install Redis from https://github.com/microsoftarchive/redis/releases and make sure the redis server is running on default port.
-5. Run uvicorn main:app --reload
+5. Run server:
+   ```bash
+   uvicorn main:app --reload
 6. Get your Gemini API Key from https://ai.google.dev/gemini-api/docs/api-key and enter in the terminal when prompted.
 7. Go to 127.0.0.1:8000/docs to perform the requests.
